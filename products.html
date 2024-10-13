@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GadgetNest - Products</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="title">
+                <h1>GadgetNest</h1>
+            </div>
+        </div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about_us.html">About Us</a>
+            <a href="products.html">Products</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+
+    <!-- Product Listing Section -->
+    <section class="product-category">
+        <h2>Headphones</h2>
+        <div class="product-grid">
+            <div class="product-item" onclick="showDetails('headphone1')">
+                <img src="images/Sony WH-CH720N.jpg" alt="Headphone 1">
+                <h3>Sony WH-CH720N</h3>
+                <p>$50</p>
+                <button class="product-button" data-product-id="headphone1">Add to Cart</button>
+            </div>
+
+            <div class="product-item" onclick="showDetails('headphone2')">
+                <img src="images/Beats Solo 4.jpg" alt="Headphone 2">
+                <h3>Beats Solo 4</h3>
+                <p>$35</p>
+                <button class="product-button" data-product-id="headphone2">Add to Cart</button>
+            </div>
+
+            <div class="product-item" onclick="showDetails('headphone3')">
+                <img src="images/Galaxy A12 Nacho.jpg" alt="Headphone 3">
+                <h3>Galaxy A12 Nacho</h3>
+                <p>$49</p>
+                <button class="product-button" data-product-id="headphone3">Add to Cart</button>
+            </div>
+
+            <div class="product-item" onclick="showDetails('headphone4')">
+                <img src="images/Tronsmart Onyx Free True Wireless Earphones.jpg" alt="Headphone 4">
+                <h3>Tronsmart Onyx Free True Wireless Earphones</h3>
+                <p>$43</p>
+                <button class="product-button" data-product-id="headphone4">Add to Cart</button>
+            </div>
+
+            <div class="product-item" onclick="showDetails('headphone5')">
+                <img src="images/Beats Flex.jpg" alt="Headphone 5">
+                <h3>Beats Flex</h3>
+                <p>$50</p>
+                <button class="product-button" data-product-id="headphone5">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-category">
+        <h2>Powerbanks</h2>
+        <div class="product-grid">
+            <div class="product-item" onclick="showDetails('powerbank1')">
+                <img src="images/powerbanks/Xiaomi 20000mAh.jpg" alt="Powerbank 1">
+                <h3>Xiaomi 20000mAh</h3>
+                <p>$30</p>
+                <button class="product-button" data-product-id="powerbank1">Add to Cart</button>
+            </div>
+
+            <div class="product-item" onclick="showDetails('powerbank2')">
+                <img src="images/powerbanks/BENKS Magnetic Wireless.jpg" alt="Powerbank 2">
+                <h3>BENKS Magnetic Wireless</h3>
+                <p>$35</p>
+                <button class="product-button" data-product-id="powerbank2">Add to Cart</button>
+            </div>
+
+            <div class="product-item" onclick="showDetails('powerbank3')">
+                <img src="images/powerbanks/NEXT ONE Power Bank MagSafe Compatible.jpg" alt="Powerbank 3">
+                <h3>NEXT ONE Power Bank MagSafe Compatible</h3>
+                <p>$40</p>
+                <button class="product-button" data-product-id="powerbank3">Add to Cart</button>
+            </div>
+
+            <div class="product-item" onclick="showDetails('powerbank4')">
+                <img src="images/powerbanks/Xiaomi 22.5W Power Bank 10000 - Xiaomi UK.jpg" alt="Powerbank 4">
+                <h3>Xiaomi 22.5W Power Bank 10000 - Xiaomi UK</h3>
+                <p>$33</p>
+                <button class="product-button" data-product-id="powerbank4">Add to Cart</button>
+            </div>
+
+            <div class="product-item" onclick="showDetails('powerbank5')">
+                <img src="images/powerbanks/Xiaomi Pocket Power Bank 10000mAh.jpg" alt="Powerbank 5">
+                <h3>Xiaomi Pocket Power Bank 10000mAh</h3>
+                <p>$39</p>
+                <button class="product-button" data-product-id="powerbank5">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-category">
+        <h2>Speakers</h2>
+        <div class="product-grid">
+            <div class="product-item" onclick="showDetails('speaker1')">
+                <img src="images/Speakers/Audioengine HD3 Wireless Speaker - 60W Powered.jpg" alt="Speaker 1">
+                <h3>Audioengine HD3 Wireless Speaker - 60W Powered</h3>
+                <p>$50</p>
+                <button class="product-button" data-product-id="speaker1">Add to Cart</button>
+            </div>
+
+            <div class="product-item" onclick="showDetails('speaker2')">
+                <img src="images/Speakers/PSB Alpha IQ BluOS Active Speakers.jpg" alt="Speaker 2">
+                <h3>PSB Alpha IQ BluOS Active Speakers</h3>
+                <p>$50</p>
+                <button class="product-button" data-product-id="speaker2">Add to Cart</button>
+            </div>
+
+            <div class="product-item" onclick="showDetails('speaker3')">
+                <img src="images/Speakers/Kanto Ora Powered Reference Desktop.jpg" alt="Speaker 3">
+                <h3>Kanto Ora Powered Reference Desktop</h3>
+                <p>$50</p>
+                <button class="product-button" data-product-id="speaker3">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Details Modal -->
+    <div id="product-details" class="modal" style="display:none;">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h3 id="product-name"></h3>
+        <p id="product-price"></p>
+        <button id="buy-now-btn" onclick="event.stopPropagation(); addToCart()">Add to Cart</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
